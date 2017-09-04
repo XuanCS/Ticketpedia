@@ -92,6 +92,7 @@ public class ItemHistory extends HttpServlet {
 				String itemId = (String) array.get(i);
 				histories.add(itemId);
 			}
+		//	System.out.println("test history");
 			conn.setFavoriteItems(userId, histories);
 			RpcHelper.writeJsonObject(response, new JSONObject().put("result", "SUCCESS"));
 		} catch (JSONException e) {
